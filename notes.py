@@ -10,5 +10,5 @@ def main():
 	for i in range(len(s)):
 		if re.search('^!', s[i]):
 			print s[i]
-	print "Hello World"
+	
 main()
