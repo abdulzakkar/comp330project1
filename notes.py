@@ -4,24 +4,30 @@ import re
 from report_mentions import reportMentions
 from organize_by_mention import organizeByMention
 
-def howMany(c,s):
-	output = 0
+def tabsToSpaces(s):
+	output = ''
 	for i in range(len(s)):
-		if s[i] == c:
-			output += 1
+		if s[i] == '\t':
+			output = ' '*4
+		else:
+			output += s[i]
 	return output
 
 def reportFormat(t):
 	t = t.split('\n')
+	t = map(tabsToSpaces, t)
 	lengths = map(len, t)
 	output = '+' + '-' * max(lengths) + '+\n'
 	for i in range(len(t)):
 		if i != len(t) - 1:
-			output += '|' + t[i] + ' ' * (max(lengths) - lengths[i] - 6 * howMany('\t', t[i])) + '|\n'
+			output += '|' + t[i] + ' ' * (max(lengths) - lengths[i]) + '|\n'
 	output += '+' + '-' * max(lengths) + '+\n\n'
 	return output
 
 def main():
+	if len(sys.argv) < 2:
+		print "Please add the directory in which your notes are found:\npython notes.py path/to/notes/"
+		return
 	os.chdir(sys.argv[1])
 	fileList = os.listdir(os.curdir)
 	fileContents = list(fileList)

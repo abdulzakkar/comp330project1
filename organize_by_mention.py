@@ -9,10 +9,10 @@ def organizeByMention(fileContents,fileList):
 	for i in range(len(fileContents)):
 		tempMentions = [fileList[i]]
 		for j in range(len(fileContents[i])):
-			if re.search('@', fileContents[i][j]):
+			if re.search('[@#]', fileContents[i][j]):
 				line = fileContents[i][j].split(' ')
 				for k in range(len(line)):
-					if re.search('^@', line[k]):
+					if re.search('^[@#]', line[k]):
 						tempMentions.append(line[k].strip())
 						mentions.append(line[k].strip())
 		fileMentions.append(tempMentions)
