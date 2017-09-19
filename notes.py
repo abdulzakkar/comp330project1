@@ -3,6 +3,7 @@ import sys
 import re
 from report_mentions import reportMentions
 from organize_by_mention import organizeByMention
+from report_keywords import reportKeywords
 
 def tabsToSpaces(s):
 	output = ''
@@ -40,14 +41,22 @@ def main():
 	userInput = '-'
 	newData = ''
 	
-	while userInput.lower() != 'q':
-		print "Please select a tool:\n\tA. report mentions\n\tB. organize notes by mention\n\tQ. quit Notes"
+	while True:
+		flag = True
+		print "Please select a tool:\n\tA. report mentions\n\tB. organize notes by mention\n\tC. Report keywords\n\tQ. quit Notes"
 		userInput = raw_input()
 		if userInput.lower() == 'a':
 			newData = reportMentions(fileContents,fileList)
 		elif userInput.lower() == 'b':
 			newData = organizeByMention(fileContents, fileList)
-		if userInput.lower() != 'q':
+		elif userInput.lower() == 'c':
+			newData = reportKeywords(fileContents, fileList)
+		elif userInput.lower() == 'q':
+			break
+		else:
+			print "\n\nPlease choose one of the options below.\n\n"
+			flag = False
+		if flag:
 			print "The following has been added to your Analysis Output:"
 			print reportFormat(newData)
 			o.write(newData + '\n')
