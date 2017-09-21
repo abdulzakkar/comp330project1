@@ -3,9 +3,9 @@ import sys
 import re
 from report_keywords import reportKeywords, removeChars, reportFormat
 
-def notesByKeyword(fileContents,fileList,minFound):
-    output = reportFormat('Notes by Keyword (found in at least ' + str(minFound) + ' file(s)):\n')
-    keywords = reportKeywords(fileContents,fileList,'l',2)
+def notesByKeyword(fileContents,fileList,minFound, occurrences):
+    output = reportFormat('Notes by Keyword (found in at least ' + str(minFound) + ' file(s))\n(minimum ' + str(occurrences) + ' keyword occurrence(s)):\n')
+    keywords = reportKeywords(fileContents,fileList,'l',2, occurrences)
     anythingFound = False
     for n in range(len(keywords)):
         found = []

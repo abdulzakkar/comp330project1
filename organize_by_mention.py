@@ -18,6 +18,8 @@ def organizeByMention(fileContents,fileList):
 						mentions.append(line[k].strip())
 		fileMentions.append(tempMentions)
 	mentions = list(set(mentions))
+	if len(mentions) == 0:
+		output += 'None\n'
 	for i in range(len(mentions)):
 		output += mentions[i] + '\n'
 		for j in range(len(fileMentions)):

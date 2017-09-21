@@ -4,6 +4,7 @@ import re
 from report_keywords import reportFormat
 
 def reportMentions(fileContents,fileList):
+	flag = False
 	output = reportFormat('Mentions Report:\n')
 	for i in range(len(fileContents)):
 		tempMentions = []
@@ -18,4 +19,7 @@ def reportMentions(fileContents,fileList):
 			tempMentions = list(set(tempMentions))
 			for j in range(len(tempMentions)):
 				output += '\t' + tempMentions[j] + '\n'
+			flag = True
+	if not flag:
+		output += 'None\n'
 	return output

@@ -37,13 +37,13 @@ def tabsToSpaces(s):
 			output += s[i]
 	return output
 
-def reportKeywords(fileContents,fileList,style,columns):
+def reportKeywords(fileContents,fileList,style,columns,occurrences):
     #Style should be set to l for list return
     #Style should be set to s for formatted string return
     f = open('/home/ubuntu/workspace/boring_words_filtered.txt', 'r') #Shouldn't require path
     boringWords = map(str.lower, map(str.strip, f.readlines()))
     f.close()
-    output = reportFormat('All Keywords (' + str(columns) + ' column(s)):\n')
+    output = reportFormat('All Keywords (' + str(columns) + ' column(s))\n(at least ' + str(occurrences) + ' occurrence(s)):\n')
     wordCounts = {}
     for i in range(len(fileContents)):
 		for j in range(len(fileContents[i])):
@@ -56,12 +56,14 @@ def reportKeywords(fileContents,fileList,style,columns):
 		            wordCounts[words[k].lower()] = 1
     finalOutput = []
     for key, value in wordCounts.iteritems():
-        if value > 2:
+        if value >= occurrences:
             finalOutput.append(key)
     finalOutput = sorted(finalOutput)
     if style == 'l':
         return finalOutput
     else: #do some column formatting
+        if len(finalOutput) == 0:
+            return output + 'None\n'
         formattedOutput = []
         columnWidths = []
         for i in range(columns):
