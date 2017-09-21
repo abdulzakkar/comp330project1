@@ -6,7 +6,7 @@ from organize_by_mention import organizeByMention
 from report_keywords import reportKeywords, isNum, reportFormat
 from notes_by_keyword import notesByKeyword
 from topological_sort import topologicalSort
-#from search_term import searchTerm
+from search_term import searchTerm
 
 def menu(isWrite):
 	if isWrite:
@@ -155,9 +155,12 @@ def main():
 				newData = reportKeywords(fileContents,fileList,'s',userInput[0],userInput[1])
 				
 		elif userInput[0].lower() == 'd':
-			print 'Not yet implemented'
-			flag = False
-			
+			userInput = checkSyntaxValidity('D', userInput, ['-t'], ['term to be searched for'], [False], [True], [0])
+			if not userInput[0]:
+				print reportFormat(userInput[1])
+				flag = False
+			else:
+				newData = searchTerm(fileContents,fileList,userInput[0])
 		elif userInput[0].lower() == 'e':
 			userInput = checkSyntaxValidity('E', userInput, ['-f','-n'], ['minimum number of files containing a given keyword','minimum number of keyword occurrences'], [True,True], [False,False], [2,3])
 			if not userInput[0]:
