@@ -9,7 +9,7 @@
 + Also, notes.py file now has one function which can report all the mentions present in each file.
 + The functionality was added into the file report_mentions.py, we will continue to separate different functions into individual py files.
 + To do:
-+ + The numbers correspond to the functions requested in the homework page:
++ The numbers correspond to the functions requested in the homework page:
 1. is done
 2. Abdul first
 3. Katie first
@@ -40,4 +40,15 @@ it is possible to select only those tools and quit out of the program to view th
 2. organize by keywords tool
 3. topologically organize tool
 4. improve UI
+
+### 9/20/17
++ Today, we focused on a complete user interface overhaul. Everthing is streamlined, and most if not all errors are caught.
++ We set up a saving file interface with overwrite functionality and file naming.
++ We set up syntax for using certain tools.
++ Using tool C can take an integer for the number of columns to print with.
++ Using tool E can take an integer for the number of files necessary for a keyword to appear in its output.
++ To do:
+1. Complete the term search function. Set up syntax just like tools C and E.
+2. Work on tool F: topological sorting.
+3. Work on documentation for the entire project.
 
