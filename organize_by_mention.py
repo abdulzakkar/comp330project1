@@ -1,9 +1,10 @@
 import os
 import sys
 import re
+from report_keywords import reportFormat
 
 def organizeByMention(fileContents,fileList):
-	output = 'Notes organized by Mention:\n\n'
+	output = reportFormat('Notes organized by Mention:\n')
 	fileMentions = []
 	mentions = []
 	for i in range(len(fileContents)):

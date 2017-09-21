@@ -1,9 +1,10 @@
 import os
 import sys
 import re
+from report_keywords import reportFormat
 
 def reportMentions(fileContents,fileList):
-	output = 'Mentions Report:\n\n'
+	output = reportFormat('Mentions Report:\n')
 	for i in range(len(fileContents)):
 		tempMentions = []
 		for j in range(len(fileContents[i])):
