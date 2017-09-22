@@ -52,3 +52,12 @@ it is possible to select only those tools and quit out of the program to view th
 2. Work on tool F: topological sorting.
 3. Work on documentation for the entire project.
 
+### 9/21/17
++ Today, we worked on completing both the search terms tool (D) and the topological sort tool (F).
++ Tools C, D, and E all utilize the new syntax system for passing data to different tools manualy.
++ We fixed the potential for the save function to crash if the user does not properly answer yes or no questions.
++ To do:
+1. Pyunit testing.
+2. Documentation.
+3. Proper file management.
+
