@@ -15,8 +15,11 @@ def topologicalSort(fileContents, fileList):
                 if len(words[k]) > 0:
                     if re.search('^\\^',words[k]):
                         ids[i].append(words[k][1:])
-                    if re.search('^!',words[k]):
+                    elif re.search('^!',words[k]):
                         ids[i][0] = words[k][1:]
+                    #regex from https://gist.github.com/dperini/729294
+                    elif re.search('[a-zA-Z]{2,256}\\.[a-zA-Z0-9]{2,256}', words[k]):
+                        ids[i].append(words[k])
     indegree = []
     for i in range(len(ids)):
         temp = 0
@@ -36,5 +39,5 @@ def topologicalSort(fileContents, fileList):
                 maxData = indegree[j]
                 maxPos = j
         checked[maxPos] = True
-        output += fileList[maxPos] + '\n\tIndegree: ' + str(indegree[maxPos]) + '\n'
+        output += fileList[maxPos] + '\n\tIndegree: ' + str(indegree[maxPos]) + '; Outdegree: ' + str(len(ids[maxPos])-1) + '\n'
     return output

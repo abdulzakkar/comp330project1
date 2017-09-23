@@ -18,3 +18,138 @@ stepByStepGuide-lightingCandles.txt
 growingBasil.txt
 	#sports
 
++-----------------------------+
+| Notes organized by Mention: |
++-----------------------------+
+
+#Ramblers
+	D1SchoolsTop5Sports.txt
+@Pontifex
+	The-Popes-Tweets.txt
+#howTo
+	How-To-Use-A-Screwdriver.txt
+	stepByStepGuide-lightingCandles.txt
+#sports
+	D1SchoolsTop5Sports.txt
+	growingBasil.txt
+@LU-Wolf
+	D1SchoolsTop5Sports.txt
+#theWhale
+	MobyDick.txt
+@coolCat
+	stepByStepGuide-lightingCandles.txt
+
++------------------------------+
+| All Keywords (10 column(s))  |
+| (at least 10 occurrence(s)): |
++------------------------------+
+
+account  children  donald  francisverified  god    hamor    jacob     likes  lord   men      
+name     pontifex  pope    replies          reply  retweet  retweets  sep    shall  shechem  
+thee     thy       unto    ye               
+
++----------------------+
+| Search for term: the |
++----------------------+
+
+_DonaldDuck.txt
+	found 15 times.
+The-Popes-Tweets.txt
+	found 19 times.
+MobyDick.txt
+	found 38 times.
+pages79-84.txt
+	found 102 times.
+sconeRecipe.txt
+	found 3 times.
+How-To-Use-A-Screwdriver.txt
+	found 6 times.
+starwars9script.txt
+	found 2 times.
+growingBasil.txt
+	found 8 times.
+
++------------------------------------------------+
+| Notes by Keyword (found in at least 1 file(s)) |
+| (minimum 10 keyword occurrence(s)):            |
++------------------------------------------------+
+
+account
+	The-Popes-Tweets.txt
+children
+	The-Popes-Tweets.txt
+donald
+	_DonaldDuck.txt
+francisverified
+	The-Popes-Tweets.txt
+god
+	The-Popes-Tweets.txt
+hamor
+	pages79-84.txt
+jacob
+	pages79-84.txt
+likes
+	The-Popes-Tweets.txt
+lord
+	The-Popes-Tweets.txt
+men
+	MobyDick.txt
+name
+	pages79-84.txt
+pontifex
+	The-Popes-Tweets.txt
+pope
+	The-Popes-Tweets.txt
+replies
+	The-Popes-Tweets.txt
+reply
+	The-Popes-Tweets.txt
+retweet
+	The-Popes-Tweets.txt
+retweets
+	The-Popes-Tweets.txt
+sep
+	The-Popes-Tweets.txt
+shall
+	pages79-84.txt
+shechem
+	pages79-84.txt
+thee
+	MobyDick.txt
+thy
+	pages79-84.txt
+unto
+	The-Popes-Tweets.txt
+ye
+	MobyDick.txt
+
++----------------------------+
+| Notes topologically sorted |
+| (Sorted by indegree):      |
++----------------------------+
+
+How-To-Use-A-Screwdriver.txt
+	Indegree: 2; Outdegree: 1
+_DonaldDuck.txt
+	Indegree: 0; Outdegree: 0
+D1SchoolsTop5Sports.txt
+	Indegree: 0; Outdegree: 0
+The-Popes-Tweets.txt
+	Indegree: 0; Outdegree: 0
+MobyDick.txt
+	Indegree: 0; Outdegree: 0
+exceldata5.txt
+	Indegree: 0; Outdegree: 1
+pages79-84.txt
+	Indegree: 0; Outdegree: 0
+sconeRecipe.txt
+	Indegree: 0; Outdegree: 1
+sushi-cookbook.txt
+	Indegree: 0; Outdegree: 1
+stepByStepGuide-lightingCandles.txt
+	Indegree: 0; Outdegree: 0
+starwars9script.txt
+	Indegree: 0; Outdegree: 1
+growingBasil.txt
+	Indegree: 0; Outdegree: 0
+
