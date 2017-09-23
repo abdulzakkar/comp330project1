@@ -1,5 +1,48 @@
 # comp330project1
 
+## Menu
++ User must enter a letter or command then hit enter.
++ command: a
+
+### Tool A: report mentions
++ reports all @phrase and #phrase in each file.
+
+### Tool B: organize by mention
++ reports all mentions along with each file they are present in.
++ command: b
+
+### Tool C: report keywords
++ keywords are words that are repeated s times among all files.
++ keywords can be reported in c columns.
++ command: c -s **number of repeated appearances** -c **number of columns**
+
+### Tool D: search terms
++ reports all files that contain a search term and how many times it appeared in each file.
++ command: d -t **term to search**
+
+### Tool E: notes by keyword
++ keywords are defined in Tool C description.
++ reports files in which each keyword is mentioned.
++ reports can be filtered by a minimum number of files in which a keyword must occur (f).
++ the minimum number of repeated appearances in a keyword among all files can also be set (n).
++ command: e -f **number of files** -n **number of repeated appearances**
+
+### Tool F: topological sort
++ reports notes in order of highest to lowest indegree (by ids **!** and references **^**).
++ command: f
+
+### Toggle T
++ toggle between simply viewing output and writing output to file.
++ command: t
+
+### Quit
++ quits the Notes app and allows user to save output (as long as some output exists).
++ requests file name from user. User may include path in file name. Must be a valid name and path.
++ If the file exists, the user will be asked if they would like to overwrite the original file.
++ command: q
+
+## Daily Records
+
 ### 9/15/17
 + Today, we set up the github and cloud 9.
 + We added the sample notes files to the directory in cloud 9.
@@ -60,4 +103,7 @@ it is possible to select only those tools and quit out of the program to view th
 1. Pyunit testing.
 2. Documentation.
 3. Proper file management.
+
+### 9/22/17
++ Today, we completed unit testing and documentation.
 
